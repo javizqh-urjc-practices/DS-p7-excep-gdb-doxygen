@@ -13,12 +13,6 @@
 
 MenuBar::MenuBar(){}
 
-/**
- * @brief Create a new Menu bar instance of the type specified
- * 
- * @param type Type of menu bar
- * @return MenuBar* New menu bar instance
- */
 MenuBar * MenuBar::Create(const std::string type){
   if (type == "CLI"){
     return new CLMenuBar;
@@ -29,20 +23,10 @@ MenuBar * MenuBar::Create(const std::string type){
   }
 }
 
-/**
- * @brief Sets the user name 
- * 
- * @param userName 
- */
 void MenuBar::setUserName(std::string userName){
   this->userName = userName;
 }
 
-/**
- * @brief Sets the current menu
- * 
- * @param currentMenu 
- */
 void MenuBar::setCurrentMenu(std::string currentMenu){
   this->currentMenu = currentMenu;
 }

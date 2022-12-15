@@ -17,6 +17,10 @@
 class CLMenuBar : public MenuBar{
   public:
     CLMenuBar(); /* basic constructor */
+    /**
+    * @brief Show the menu bar in the command line
+    * 
+    */
     void show();
 
 };

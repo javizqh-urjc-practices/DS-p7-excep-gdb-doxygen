@@ -15,6 +15,13 @@
 
 class Admin : public User{
   public:
+    /**
+    * @brief Creates a new Admin object
+    * 
+    * @param employeeNumber 
+    * @param NIF 
+    * @param name 
+    */
     Admin(std::string number = "00000",std::string nif = "00000000",std::string name = "default");
     ~Admin();
 };

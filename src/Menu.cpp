@@ -13,12 +13,7 @@
 
 Menu::Menu(){}
 
-/**
- * @brief Create a new Menu instance of the type specified
- * 
- * @param type Type of menu
- * @return Menu* New menu instance
- */
+
 Menu * Menu::Create(const std::string type){
   if (type == "CLI"){
     return new CLMenu;

@@ -10,20 +10,10 @@
  */
 #include "CLInterface.h"
 
-/**
- * @brief Create a new Interface for the command line
- * @note Also gets the terminal size 
- */
 CLInterface::CLInterface(){
   setTerminalSize();
 };
 
-/**
- * @brief Controls the login interface for the command line
- * 
- * @param tries Number of tries to login
- * @note If exceeded the number of tries, then the program will exit
- */
 void CLInterface::login(int tries){
   if (tries == 0){
     loginInterface = LoginInterface::Create();

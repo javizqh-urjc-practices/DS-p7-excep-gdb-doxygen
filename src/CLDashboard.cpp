@@ -10,10 +10,7 @@
  */
 #include "CLDashboard.h"
 
-/**
- * @brief Create a new Dashboard for the command line
- * 
- */
+
 CLDashboard::CLDashboard(){
   Sensor *sensor1 = Sensor::Create("thermometer");
   Sensor *sensor2 = Sensor::Create("humidity");
@@ -35,10 +32,6 @@ CLDashboard::CLDashboard(){
   this->menu = Menu::Create();
 }
 
-/**
- * @brief Shows the default menu and starts the custom terminal
- * 
- */
 void CLDashboard::showMainMenu(){
   this->menuBar->setUserName(this->user.getName());
   this->currentInterface = "..";
@@ -47,10 +40,6 @@ void CLDashboard::showMainMenu(){
   readCommand();
 }
 
-/**
- * @brief Reads and executes a command from the terminal 
- * 
- */
 void CLDashboard::readCommand(){
   std::vector<std::string> command;
   int lineNumber = 0;
@@ -119,10 +108,6 @@ void CLDashboard::readCommand(){
   }
 }
 
-/**
- * @brief Command that lists the sensors in the current menu page
- * 
- */
 void CLDashboard::listSensor(){
 if (this->currentInterface.compare("..") != 0) return;
 
@@ -132,11 +117,6 @@ if (this->currentInterface.compare("..") != 0) return;
   std::cout << "\n";
 }
 
-/**
- * @brief Change the page of the menu
- * 
- * @param n Number of pages to shift ( positive to the right )
- */
 void CLDashboard::changeMainMenu(int n){
   if (this->currentInterface.compare("..") == 0){ 
     moveWindowMainMenu(n);
@@ -145,28 +125,15 @@ void CLDashboard::changeMainMenu(int n){
   }
 }
 
-/**
- * @brief Displays the use of the command 
- * 
- * @param command Command to display info about
- */
+
 void CLDashboard::helpCommand(std::string command){
   std::cout << "Help " << command << "\n";
 }
 
-/**
- * @brief Shows error message because the command not being found
- * 
- * @param command Command input
- */
 void CLDashboard::errorCommand(std::string command){
   std::cout << command << ": command not found\n";
 }
 
-/**
- * @brief Shows error message because the permission being denied to execute it
- * 
- */
 void CLDashboard::permissionError(){
   std::cout << this->user.getName() << " does not have the permissions required. Make sure to contact an administrator.\n";
 }

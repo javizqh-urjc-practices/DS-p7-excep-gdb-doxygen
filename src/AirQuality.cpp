@@ -10,26 +10,10 @@
  */
 #include "AirQuality.h"
 
-/**
- * @brief Id of all the air quality sensor so there is not a duplicate id
- * 
- */
 int AirQuality::idNumber = 0;
 
-/**
- * @brief Create a new Air Quality object
- * 
- * @param active By default off
- * @param valPerMin By default 1 val/min
- */
 AirQuality::AirQuality (bool active, int valPerMin):Sensor("airqual" + std::to_string(AirQuality::idNumber ++),"air quality sensor","µg/m³",active,valPerMin){}
 
-/**
- * @brief Request data from the air quality sensor
- * 
- * @return std::vector<int>  Data values
- * @note This function is a placeholder, returns random values 
- */
 std::vector<int> AirQuality::requestData(){
   int valueRange = 150;
   this->data.clear();

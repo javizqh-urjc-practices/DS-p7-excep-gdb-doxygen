@@ -13,12 +13,6 @@
 
 LoginInterface::LoginInterface(){}
 
-/**
- * @brief Create a new Login interface instance of the type specified
- * 
- * @param type Type of login interface
- * @return LoginInterface* New login interface instance
- */
 LoginInterface *LoginInterface::Create(const std::string type){
   if (type == "CLI"){
     return new CLLoginInterface;
@@ -29,23 +23,11 @@ LoginInterface *LoginInterface::Create(const std::string type){
   }
 };
 
-/**
- * @brief Check if the user data corresponds to a real user and stores the user
- * 
- * @return true = The user exists
- * @return false = The user does not exists
- */
 bool LoginInterface::checkUser(){
   this->user = this->dastabase.getUser(this->inputEmployeeNumber,this->inputNIF);
   return ! (user.isSameEmployeeNumber("00000") && user.isSameNIF("00000000")); // Is valid user 
 }
 
-/**
- * @brief Returns the user that has previously logged in
- * 
- * @return User 
- * @see checkUser()
- */
 User LoginInterface::getUser(){
   return this->user;
 }

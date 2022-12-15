@@ -12,10 +12,6 @@
 
 CLLoginInterface::CLLoginInterface(){}
 
-/**
- * @brief Show the login screen messages in the command line
- * 
- */
 void CLLoginInterface::showWelcomeMessage(){
   std::cout << "\u001b[2J\u001b[0;0H";
   printCenterFromFile("config/CLIWelcomeMessage.ascii", "green");
@@ -26,10 +22,6 @@ void CLLoginInterface::showWelcomeMessage(){
   std::cout << "\u001b[s";
 }
 
-/**
- * @brief Ask the user to input the employee number from the command line
- * 
- */
 void CLLoginInterface::askEmployeeNumber(){
   std::cout << "\u001b[7C\u001b[3A";
   char * inputBuffer = new char[100];
@@ -38,19 +30,10 @@ void CLLoginInterface::askEmployeeNumber(){
   delete inputBuffer;
 }
 
-/**
- * @brief Default setter of employee number
- * @note This method is used when the user executes the main with the NIF and employee number
- * @param userNumber 
- */
 void CLLoginInterface::askEmployeeNumber(const std::string & userNumber){
   this->inputEmployeeNumber = userNumber;
 }
 
-/**
- * @brief Ask the user to input the employee nif from the command line
- * 
- */
 void CLLoginInterface::askNIF(){
   std::cout << "\u001b[u";
   char * inputBuffer = new char[100];
@@ -60,11 +43,6 @@ void CLLoginInterface::askNIF(){
   std::cout << "\n\n\n";
 }
 
-/**
- * @brief Default setter of employee nif
- * @note This method is used when the user executes the main with the NIF and employee number
- * @param nif 
- */
 void CLLoginInterface::askNIF(const std::string & nif){
   this->inputNIF = nif;
 }

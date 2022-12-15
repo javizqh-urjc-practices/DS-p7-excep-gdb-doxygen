@@ -17,8 +17,19 @@ class Database{
   public:
     Database(); /* basic constructor */
     ~Database();
+    /**
+     * @brief adds a new user to the database
+     * 
+     */
     void addUser(User);
-    User getUser(std::string,std::string);
+    /**
+     * @brief Get the User object in the database, if not found returns default user
+     * 
+     * @param employeeNumber 
+     * @param NIF 
+     * @return User 
+     */
+    User getUser(std::string employeeNumber,std::string NIF);
   private:
     std::vector<User> user;
 };

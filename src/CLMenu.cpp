@@ -12,11 +12,6 @@
 
 CLMenu::CLMenu(){}
 
-/**
- * @brief Shows the menu with six or less smaller sensors displayed in the command line
- * 
- * @param sensors Array of sensor to display <= 7
- */
 void CLMenu::show(std::vector <Sensor *> sensors){
   std::cout << "\u001b[s"; // Save cursor pos
   if (sensors.size() == 0) return;
@@ -42,11 +37,6 @@ void CLMenu::show(std::vector <Sensor *> sensors){
   std::cout << "\u001b[u"; // Reload cursor pos
 }
 
-/**
- * @brief Shows the menu for the sensor selected in a detailed format in the command line
- * 
- * @param sensorToDisplay Sensor to display
- */
 void CLMenu::show(Sensor *sensorToDisplay){
   std::cout << "\u001b[s"; // Save cursor pos
   // Graphic size 60 * 30
@@ -80,10 +70,6 @@ void CLMenu::show(Sensor *sensorToDisplay){
   std::cout << "\u001b[u"; // Reload cursor pos
 }
 
-/**
- * @brief Clear the menu in the command line
- * 
- */
 void CLMenu::clearMenu(){
   std::cout << "\u001b[" << getTerminalHeight() - 12 << ";0H" << "\u001b[1J";
 }

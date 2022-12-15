@@ -65,6 +65,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classUser-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">User Class Reference</div>  </div>
@@ -103,6 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc1e2382a4d6cb7887a65461487e3a7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUser.html#adc1e2382a4d6cb7887a65461487e3a7b">hasAdminPermission</a> ()</td></tr>
 <tr class="memdesc:adc1e2382a4d6cb7887a65461487e3a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the user permissions.  <a href="classUser.html#adc1e2382a4d6cb7887a65461487e3a7b">More...</a><br /></td></tr>
 <tr class="separator:adc1e2382a4d6cb7887a65461487e3a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43625144387db43f20412db40095b514"><td class="memItemLeft" align="right" valign="top"><a id="a43625144387db43f20412db40095b514"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classUser.html">User</a> &amp;) const</td></tr>
+<tr class="separator:a43625144387db43f20412db40095b514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b151d814ff24f339c4e2c22af601ea7"><td class="memItemLeft" align="right" valign="top"><a id="a2b151d814ff24f339c4e2c22af601ea7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classUser.html">User</a> &amp;) const</td></tr>
+<tr class="separator:a2b151d814ff24f339c4e2c22af601ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -130,6 +137,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>lastLogTime</b
 <tr class="memitem:abf90474182e8afa96fbd1da2c9e65b7b"><td class="memItemLeft" align="right" valign="top"><a id="abf90474182e8afa96fbd1da2c9e65b7b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>adminPermission</b></td></tr>
 <tr class="separator:abf90474182e8afa96fbd1da2c9e65b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:abfe099b0ca9a4051e4cd9c15a31985ab"><td class="memItemLeft" align="right" valign="top"><a id="abfe099b0ca9a4051e4cd9c15a31985ab"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;, const <a class="el" href="classUser.html">User</a> &amp;)</td></tr>
+<tr class="separator:abfe099b0ca9a4051e4cd9c15a31985ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a54794305b09de5dddd9fae6d3ba38b6f"></a>
@@ -142,13 +155,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>adminPermission</b></
           <td class="memname">User::User </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>employeeNumber</em> = <code>&quot;00000&quot;</code>, </td>
+          <td class="paramname"><em>number</em> = <code>&quot;00000&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>NIF</em> = <code>&quot;00000000&quot;</code>, </td>
+          <td class="paramname"><em>nif</em> = <code>&quot;00000000&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -12,10 +12,6 @@
 
 CLMenuBar::CLMenuBar(){}
 
-/**
- * @brief Show the menu bar in the command line
- * 
- */
 void CLMenuBar::show(){
   std::cout << "\u001b[0;0H";
   printLeft("User: " + this->userName);

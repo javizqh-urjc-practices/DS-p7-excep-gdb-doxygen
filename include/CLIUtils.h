@@ -18,15 +18,46 @@ void setTerminalSize();
 int getTerminalWidth();
 int getTerminalHeight();
 
+/**
+ * @brief Print the contents of the file in the center
+ * 
+ * @param fileName 
+ * @param color 
+ */
 void printCenterFromFile(const std::string fileName, const std::string color = "none");
+/**
+ * @brief Print the string in the center
+ * 
+ * @param toPrint 
+ * @param padding 
+ */
 void printCenter(const std::string toPrint, const int padding = 0);
+/**
+ * @brief Print the string in the center
+ * 
+ * @param toPrint 
+ * @param padding 
+ * @param color 
+ */
 void printCenter(const std::string toPrint, const std::string color, const int padding = 0 );
 void printRight(const std::string toPrint, const int padding = 0);
 void printRight(const std::string toPrint, const std::string color, const int padding = 0 );
 void printLeft(const std::string toPrint, const int padding = 0);
 void printLeft(const std::string toPrint, const std::string color ,const int padding = 0);
 
+/**
+ * @brief Print the string to the terminal in the given color
+ * 
+ * @param toPrint 
+ * @param color 
+ */
 void printColor(std::string, std::string = "none");
+/**
+ * @brief Set the Color to print
+ * 
+ * @param color 
+ * @return std::string 
+ */
 std::string setColor(std::string);
 
 void startCustomTerminal(int);

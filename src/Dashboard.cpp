@@ -17,12 +17,7 @@ Dashboard::Dashboard(){
   this->currentSensor = nullptr;
 }
 
-/**
- * @brief Create a new instance of the desired Dashboard interface
- * 
- * @param type Type of Dashboard interface
- * @return Dashboard*  
- */
+
 Dashboard *Dashboard::Create(const std::string type){
   if (type == "CLI"){
     return new CLDashboard();
@@ -33,18 +28,6 @@ Dashboard *Dashboard::Create(const std::string type){
   }
 };
 
-/**
- * @brief 
- * 
- * @param newInterface 
- */
-/**
- * @brief Changes the current interface to the input one
- * 
- * @param newInterface Desired interface to change ( .. = main Menu)
- * @return true = can change interface
- * @return false = cannot change interface
- */
 bool Dashboard::changeInterface(std::string newInterface){
   
   if (newInterface.compare("..") == 0){
@@ -78,11 +61,7 @@ bool Dashboard::changeInterface(std::string newInterface){
     return false;
   }
 }
-/**
- * @brief Adds a sensor to the dashboard
- * 
- * @param sensor Sensor to add
- */
+
 void Dashboard::addToMainMenu(Sensor *sensor){
   std::vector<Sensor *> tmp;
   if (this->mainMenu.back().size() < 6) {
@@ -96,10 +75,6 @@ void Dashboard::addToMainMenu(Sensor *sensor){
   this->mainMenu.push_back(tmp);
 }
 
-/**
- * @brief Adds all the current sensors to the dashboard
- * @note Only called at the start of the program
- */
 void Dashboard::addToMainMenu(){
   std::vector<Sensor *> tmp;
   int nSensorWindow = 6;
@@ -114,32 +89,15 @@ void Dashboard::addToMainMenu(){
   }
 }
 
-/**
- * @brief Adds the user to the dashboard
- * 
- * @param user Current user
- */
 void Dashboard::setUser(User user){
   this->user = user;
 }
 
-/**
- * @brief Creates the new sensor and calls addToMainMenu
- * 
- * @param type New sensor type
- * @see addToMainMenu
- */
 void Dashboard::addNewSensor(std::string type){
   Sensor *sensor = Sensor::Create(type);;
   addToMainMenu(sensor);
 }
 
-/**
- * @brief Deletes the desired sensor from the dashboard
- * 
- * @param id ID of the sensor to delete
- * @see addToMainMenu
- */
 void Dashboard::deleteSensor(std::string id){
   // Check if we are going to delete the last sensor
   if (this->sensor.size() == 1) return;
@@ -163,23 +121,13 @@ void Dashboard::deleteSensor(std::string id){
   addToMainMenu();
 }
 
-/**
- * @brief Shifts the main menu n pages
- * 
- * @param n Number of pages to shift ( positive to the right )
- */
+
 void Dashboard::moveWindowMainMenu(int n){
   if (this->mainMenuIndex + n < 0) return;
   if (this->mainMenuIndex + n >= this->mainMenu.size()) return;
   this->mainMenuIndex += n;
 }
 
-/**
- * @brief Changes the current sensor values
- * 
- * @param toChange Desired value to change
- * @param newValue New value to add
- */
 void Dashboard::changeCurrentSensorInfo(std::string toChange, std::string newValue){
 
   if (this->currentInterface.compare("..") == 0) return;
@@ -205,41 +153,24 @@ void Dashboard::changeCurrentSensorInfo(std::string toChange, std::string newVal
   this->changeInterface(this->currentInterface);
 }
 
-/**
- * @brief Deletes all the sensors from the dashboard
- * @note Only called when exiting the dashboard
- * 
- */
+
 void Dashboard::cleanSensor(){
   for (Sensor * sensor : this->sensor){
     delete sensor;
   }
 }
 
-/**
- * @brief Exits the dashboard and finishes the program
- * @see cleanSensor
- */
+
 void Dashboard::exit(){
   cleanSensor();
   this->allowedToExit = true;
 }
 
-/**
- * @brief Exits the dashboard and goes back to the login screen
- * @see cleanSensor
- */
 void Dashboard::logout(){
   cleanSensor();
   this->allowedToExit = false;
 }
 
-/**
- * @brief Called from main, checks if the program is allowed to exit
- * 
- * @return true End the program
- * @return false Cannot exit, goes to login screen 
- */
 bool Dashboard::canExit(){
   return this->allowedToExit;
 }

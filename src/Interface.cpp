@@ -13,12 +13,6 @@
 
 Interface::Interface(){};
 
-/**
- * @brief Create a new Interface instance of the type specified
- * 
- * @param type Type of interface
- * @return Interface* New Interface instance
- */
 Interface *Interface::Create(const std::string type){
   if (type == "CLI"){
     return new CLInterface;
@@ -29,13 +23,6 @@ Interface *Interface::Create(const std::string type){
   }
 };
 
-/**
- * @brief Default login method withouth any interface
- * 
- * @param userNumber 
- * @param nif 
- * @note This method is used when the user executes the main with the NIF and employee number
- */
 void Interface::login(const std::string userNumber, const std::string nif){
   loginInterface = LoginInterface::Create();
   this->loginInterface = loginInterface;
@@ -49,12 +36,6 @@ void Interface::login(const std::string userNumber, const std::string nif){
   }
 };
 
-/**
- * @brief Creates and loads the dashboard
- * 
- * @return true = exit
- * @return false = login again
- */
 bool Interface::loadMenu(){
   dashboard = Dashboard::Create();
   this->dashboard = dashboard;

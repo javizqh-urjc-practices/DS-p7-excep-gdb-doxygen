@@ -15,10 +15,26 @@
 
 class Thermometer : public Sensor{
   public:
+    /**
+    * @brief Create a new Thermometer object
+    * 
+    * @param active By default off
+    * @param valPerMin By default 1 val/min
+    */
     Thermometer(bool active = false, int valPerMin = 1);
+    /**
+    * @brief Request data from the thermometer
+    * 
+    * @return std::vector<int>  Data values
+    * @note This function is a placeholder, returns random values 
+    */
     std::vector<int> requestData();
     ~Thermometer();
   private:
+    /**
+    * @brief Id of all the thermometer so there is not a duplicate id
+    * 
+    */
     static int idNumber ;
 };
 

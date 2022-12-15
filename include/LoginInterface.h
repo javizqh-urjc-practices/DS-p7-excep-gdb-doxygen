@@ -15,6 +15,12 @@
 
 class LoginInterface{
 public:
+  /**
+  * @brief Create a new Login interface instance of the type specified
+  * 
+  * @param type Type of login interface
+  * @return LoginInterface* New login interface instance
+  */
   static LoginInterface *Create(const std::string = "CLI");
   LoginInterface(); /* basic constructor */
   virtual ~LoginInterface();
@@ -23,7 +29,19 @@ public:
   virtual void askEmployeeNumber(const std::string & userNumber) = 0;
   virtual void askNIF() = 0;
   virtual void askNIF(const std::string & userNumber) = 0;
+  /**
+  * @brief Check if the user data corresponds to a real user and stores the user
+  * 
+  * @return true = The user exists
+  * @return false = The user does not exists
+  */
   bool checkUser();
+  /**
+  * @brief Returns the user that has previously logged in
+  * 
+  * @return User 
+  * @see checkUser()
+  */
   User getUser();
 
 protected:

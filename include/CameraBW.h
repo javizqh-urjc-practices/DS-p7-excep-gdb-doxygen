@@ -15,10 +15,26 @@
 
 class CameraBW : public Sensor{
   public:
+    /**
+    * @brief Create a new BW camera object
+    * 
+    * @param active By default off
+    * @param valPerMin By default 1 val/min
+    */
     CameraBW(bool active = false, int valPerMin = 1);
+    /**
+    * @brief Request data from the bw camera
+    * 
+    * @return std::vector<int>  Data values
+    * @note This function is a placeholder, returns random values 
+    */
     std::vector<int> requestData();
     ~CameraBW();
   private:
+    /**
+    * @brief Id of all the black and white camera so there is not a duplicate id
+    * 
+    */
     static int idNumber ;
 };
 

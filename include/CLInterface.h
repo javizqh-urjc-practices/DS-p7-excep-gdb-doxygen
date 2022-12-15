@@ -17,9 +17,18 @@
 
 class CLInterface : public Interface{
   public:
+    /**
+    * @brief Create a new Interface for the command line
+    * @note Also gets the terminal size 
+    */
     CLInterface(); /* basic constructor */
+    /**
+    * @brief Controls the login interface for the command line
+    * 
+    * @param tries Number of tries to login
+    * @note If exceeded the number of tries, then the program will exit
+    */
     void login(int tries);
-    void loadMenu();
 };
 
 #endif

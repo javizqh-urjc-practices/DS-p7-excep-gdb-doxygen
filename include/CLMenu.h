@@ -17,10 +17,24 @@
 class CLMenu : public Menu{
   public:
     CLMenu(); /* basic constructor */
+    /**
+    * @brief Shows the menu with six or less smaller sensors displayed in the command line
+    * 
+    * @param sensors Array of sensor to display <= 7
+    */
     void show(std::vector <Sensor *> );
+    /**
+    * @brief Shows the menu for the sensor selected in a detailed format in the command line
+    * 
+    * @param sensorToDisplay Sensor to display
+    */
     void show(Sensor *sensor);
 
   protected:
+    /**
+    * @brief Clear the menu in the command line
+    * 
+    */
     void clearMenu();
 };
 

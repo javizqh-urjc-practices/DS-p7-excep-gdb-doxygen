@@ -58,12 +58,6 @@ int getTerminalHeight(){
   return terminalHeight;
 }
 
-/**
- * @brief Print the contents of the file in the center
- * 
- * @param fileName 
- * @param color 
- */
 void printCenterFromFile(std::string fileName, std::string color){
   std::ifstream configFile;
   configFile.open(fileName);
@@ -81,25 +75,12 @@ void printCenterFromFile(std::string fileName, std::string color){
   }
 };
 
-/**
- * @brief Print the string in the center
- * 
- * @param toPrint 
- * @param padding 
- */
 void printCenter(const std::string toPrint, const int padding){
   std::cout << "\u001b[" <<terminalWidth <<"D";
   std::cout << "\u001b[" << (terminalWidth-toPrint.size()-padding)/2 << "C";
   std::cout << toPrint;
 }
 
-/**
- * @brief Print the string in the center
- * 
- * @param toPrint 
- * @param padding 
- * @param color 
- */
 void printCenter(const std::string toPrint, const std::string color, const int padding){
   std::cout << "\u001b[" <<terminalWidth <<"D";
   std::cout << "\u001b[" << (terminalWidth-toPrint.size()-padding)/2 << "C";
@@ -130,24 +111,12 @@ void printLeft(const std::string toPrint, const std::string color, const int pad
   printColor(toPrint,color);
 }
 
-/**
- * @brief Print the string to the terminal in the given color
- * 
- * @param toPrint 
- * @param color 
- */
 void printColor(std::string toPrint, std::string color){
   std::string colorCode = setColor(color);
   std::string noColor = "\u001b[0m";
   std::cout << colorCode << toPrint << noColor;
 }
 
-/**
- * @brief Set the Color to print
- * 
- * @param color 
- * @return std::string 
- */
 std::string setColor(std::string color){
   if (color.compare("grey") == 0) return "\u001b[1;30m";
   if (color.compare("red") == 0) return "\u001b[1;31m";

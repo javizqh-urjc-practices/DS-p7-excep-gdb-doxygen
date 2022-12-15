@@ -15,6 +15,12 @@
 
 class Menu{
   public:
+    /**
+    * @brief Create a new Menu instance of the type specified
+    * 
+    * @param type Type of menu
+    * @return Menu* New menu instance
+    */
     static Menu *Create(const std::string type = "CLI");
     Menu(); /* basic constructor */
     virtual void show(std::vector <Sensor *> ) = 0;

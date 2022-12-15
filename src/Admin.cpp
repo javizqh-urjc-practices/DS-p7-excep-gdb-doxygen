@@ -10,13 +10,6 @@
  */
 #include "Admin.h"
 
-/**
- * @brief Creates a new Admin object
- * 
- * @param employeeNumber 
- * @param NIF 
- * @param name 
- */
 Admin::Admin(std::string employeeNumber, std::string NIF, std::string name): User(employeeNumber, NIF, name){
   this->adminPermission = true;
 }
