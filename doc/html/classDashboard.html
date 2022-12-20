@@ -94,6 +94,9 @@ Collaboration diagram for Dashboard:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a19bd79be9b4102d735cb880f07306611"><td class="memItemLeft" align="right" valign="top"><a id="a19bd79be9b4102d735cb880f07306611"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Dashboard</b> (const <a class="el" href="classUser.html">User</a> &amp;user)</td></tr>
+<tr class="separator:a19bd79be9b4102d735cb880f07306611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e97ee0346c95dab5ac42fc2c917d69b"><td class="memItemLeft" align="right" valign="top"><a id="a0e97ee0346c95dab5ac42fc2c917d69b"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>showMainMenu</b> ()=0</td></tr>
 <tr class="separator:a0e97ee0346c95dab5ac42fc2c917d69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,9 +115,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>showMainMenu<
 <tr class="memitem:a5905517ba8249b567e0e4b980e57a97b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDashboard.html#a5905517ba8249b567e0e4b980e57a97b">changeCurrentSensorInfo</a> (std::string toChange, std::string newValue)</td></tr>
 <tr class="memdesc:a5905517ba8249b567e0e4b980e57a97b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current sensor values.  <a href="classDashboard.html#a5905517ba8249b567e0e4b980e57a97b">More...</a><br /></td></tr>
 <tr class="separator:a5905517ba8249b567e0e4b980e57a97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf3941317cd0601c83b042ddca524e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDashboard.html#adbf3941317cd0601c83b042ddca524e3">setUser</a> (<a class="el" href="classUser.html">User</a> user)</td></tr>
-<tr class="memdesc:adbf3941317cd0601c83b042ddca524e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the user to the dashboard.  <a href="classDashboard.html#adbf3941317cd0601c83b042ddca524e3">More...</a><br /></td></tr>
-<tr class="separator:adbf3941317cd0601c83b042ddca524e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00115991c39a1793e1fb0dd01a09ea97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDashboard.html#a00115991c39a1793e1fb0dd01a09ea97">addNewSensor</a> (std::string type)</td></tr>
 <tr class="memdesc:a00115991c39a1793e1fb0dd01a09ea97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the new sensor and calls addToMainMenu.  <a href="classDashboard.html#a00115991c39a1793e1fb0dd01a09ea97">More...</a><br /></td></tr>
 <tr class="separator:a00115991c39a1793e1fb0dd01a09ea97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,9 +136,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>showMainMenu<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9b91c50d2889393c435434cdfc9d16f3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDashboard.html">Dashboard</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDashboard.html#a9b91c50d2889393c435434cdfc9d16f3">Create</a> (const std::string type=&quot;CLI&quot;)</td></tr>
-<tr class="memdesc:a9b91c50d2889393c435434cdfc9d16f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new instance of the desired <a class="el" href="classDashboard.html">Dashboard</a> interface.  <a href="classDashboard.html#a9b91c50d2889393c435434cdfc9d16f3">More...</a><br /></td></tr>
-<tr class="separator:a9b91c50d2889393c435434cdfc9d16f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a6e0173431db0ff0d4e24d40c02371"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDashboard.html">Dashboard</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDashboard.html#a21a6e0173431db0ff0d4e24d40c02371">Create</a> (const <a class="el" href="classUser.html">User</a> &amp;user, const std::string type=&quot;CLI&quot;)</td></tr>
+<tr class="memdesc:a21a6e0173431db0ff0d4e24d40c02371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new instance of the desired <a class="el" href="classDashboard.html">Dashboard</a> interface.  <a href="classDashboard.html#a21a6e0173431db0ff0d4e24d40c02371">More...</a><br /></td></tr>
+<tr class="separator:a21a6e0173431db0ff0d4e24d40c02371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -361,8 +361,8 @@ false = cannot change interface </dd></dl>
 
 </div>
 </div>
-<a id="a9b91c50d2889393c435434cdfc9d16f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b91c50d2889393c435434cdfc9d16f3">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a21a6e0173431db0ff0d4e24d40c02371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a6e0173431db0ff0d4e24d40c02371">&#9670;&nbsp;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,9 +373,19 @@ false = cannot change interface </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classDashboard.html">Dashboard</a> * Dashboard::Create </td>
           <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>type</em> = <code>&quot;CLI&quot;</code></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classUser.html">User</a> &amp;&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>type</em> = <code>&quot;CLI&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -484,32 +494,6 @@ false = cannot change interface </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>Number of pages to shift ( positive to the right ) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="adbf3941317cd0601c83b042ddca524e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbf3941317cd0601c83b042ddca524e3">&#9670;&nbsp;</a></span>setUser()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Dashboard::setUser </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classUser.html">User</a>&#160;</td>
-          <td class="paramname"><em>user</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds the user to the dashboard. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">user</td><td>Current user </td></tr>
   </table>
   </dd>
 </dl>

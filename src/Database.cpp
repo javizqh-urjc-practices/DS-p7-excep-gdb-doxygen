@@ -9,6 +9,7 @@
  * 
  */
 #include "Database.h"
+#include "NotFoundUserException.h"
 
 Database::Database(){
   User *user1 = new User("10000","1234567A","paco");
@@ -27,8 +28,7 @@ User Database::getUser(std::string employeeNumber, std::string NIF){
       return i;
     }
   }
-  User *user = new User();
-  return *user;
+  throw NotFoundUserException();
 }
 
 void Database::addUser(User newUser){

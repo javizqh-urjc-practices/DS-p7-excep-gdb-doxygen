@@ -25,14 +25,15 @@ void CLInterface::login(int tries){
   this->loginInterface->askEmployeeNumber();
   this->loginInterface->askNIF();
   usleep(2 * 1000000);
-  if (this->loginInterface->checkUser()){
+  try {
+    this->user = this->loginInterface->checkUser();
     printCenter("Login successful" );
     std::cout << "\n";
     usleep(1 * 1000000);
     system("clear");
     tries = 0;
     delete this->loginInterface;
-  } else {
+  } catch (std::exception &e) {
     printCenter("Failed login\n", "red");
     usleep(1 * 1000000);
     tries++;

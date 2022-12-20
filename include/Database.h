@@ -23,7 +23,7 @@ class Database{
      */
     void addUser(User);
     /**
-     * @brief Get the User object in the database, if not found returns default user
+     * @brief Get the User object in the database, if not throws an exception
      * 
      * @param employeeNumber 
      * @param NIF 

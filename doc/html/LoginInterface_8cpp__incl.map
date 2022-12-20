@@ -1,7 +1,8 @@
 <map id="src/LoginInterface.cpp" name="src/LoginInterface.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="209,5,375,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="264,5,429,32"/>
 <area shape="rect" id="node2" href="$LoginInterface_8h.html" title="Header file of LoginInterface.cpp." alt="" coords="174,155,301,181"/>
 <area shape="rect" id="node11" href="$CLLoginInterface_8h.html" title="Header file of CLLoginInterface.cpp." alt="" coords="275,80,418,107"/>
+<area shape="rect" id="node17" title=" " alt="" coords="442,80,529,107"/>
 <area shape="rect" id="node3" href="$Database_8h.html" title="Header file of Database.cpp." alt="" coords="119,229,215,256"/>
 <area shape="rect" id="node4" href="$Admin_8h.html" title="Header file of Admin.cpp." alt="" coords="134,304,210,331"/>
 <area shape="rect" id="node5" href="$User_8h.html" title="Header file of User.cpp." alt="" coords="177,379,241,405"/>

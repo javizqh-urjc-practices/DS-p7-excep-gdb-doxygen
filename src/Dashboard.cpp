@@ -12,15 +12,16 @@
 #include "CLDashboard.h"
 
 
-Dashboard::Dashboard(){
+Dashboard::Dashboard(const User &user){
+  this->user = user;
   this->allowedToExit = true;
   this->currentSensor = nullptr;
 }
 
 
-Dashboard *Dashboard::Create(const std::string type){
+Dashboard *Dashboard::Create(const User &user, const std::string type){
   if (type == "CLI"){
-    return new CLDashboard();
+    return new CLDashboard(user);
   }
   else {
     throw std::runtime_error(type + " is not a defined Dashboard type");
@@ -87,10 +88,6 @@ void Dashboard::addToMainMenu(){
     }
     this->mainMenu.push_back(tmp);
   }
-}
-
-void Dashboard::setUser(User user){
-  this->user = user;
 }
 
 void Dashboard::addNewSensor(std::string type){

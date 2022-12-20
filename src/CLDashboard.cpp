@@ -11,7 +11,7 @@
 #include "CLDashboard.h"
 
 
-CLDashboard::CLDashboard(){
+CLDashboard::CLDashboard(const User &user):Dashboard(user){
   Sensor *sensor1 = Sensor::Create("thermometer");
   Sensor *sensor2 = Sensor::Create("humidity");
   Sensor *sensor3 = Sensor::Create("humidity");

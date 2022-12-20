@@ -10,6 +10,7 @@
  */
 #include "LoginInterface.h"
 #include "Dashboard.h"
+#include "Admin.h" // Also includes User
 
 #ifndef INTERFACE_H 
 #define	INTERFACE_H 
@@ -50,6 +51,7 @@ public:
 protected:
   LoginInterface * loginInterface;
   Dashboard * dashboard;
+  User user;
 };
 
 #endif

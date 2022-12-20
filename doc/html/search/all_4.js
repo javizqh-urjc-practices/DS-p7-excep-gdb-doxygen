@@ -6,6 +6,6 @@ var searchData=
   ['getname_57',['getName',['../classUser.html#a33d343edda32a72bf28d41b22b0de1bd',1,'User']]],
   ['gettimestamp_58',['getTimestamp',['../classUser.html#a647c1cb5f6bd82d66f9f629c7dc6fbee',1,'User']]],
   ['gettype_59',['getType',['../classSensor.html#a1e72d3e0e8c5c85004321639562dbbf9',1,'Sensor']]],
-  ['getuser_60',['getUser',['../classDatabase.html#a6ae29d29e453ba718b0efded09c41c7f',1,'Database::getUser()'],['../classLoginInterface.html#a7aa01e3e9d0813c9211f1eb743344a43',1,'LoginInterface::getUser()']]],
+  ['getuser_60',['getUser',['../classDatabase.html#a6ae29d29e453ba718b0efded09c41c7f',1,'Database']]],
   ['getvalpermin_61',['getValPerMin',['../classSensor.html#a9be23eee7cbf4f7ed68869012ab7fb4e',1,'Sensor']]]
 ];

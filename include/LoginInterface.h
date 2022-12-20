@@ -30,24 +30,15 @@ public:
   virtual void askNIF() = 0;
   virtual void askNIF(const std::string & userNumber) = 0;
   /**
-  * @brief Check if the user data corresponds to a real user and stores the user
-  * 
-  * @return true = The user exists
-  * @return false = The user does not exists
-  */
-  bool checkUser();
-  /**
-  * @brief Returns the user that has previously logged in
-  * 
-  * @return User 
-  * @see checkUser()
-  */
-  User getUser();
+   * @brief Returns the user in the database with the corresponding employee number and NIF
+   * 
+   * @return User 
+   */
+  User checkUser();
 
 protected:
   std::string inputNIF; /* 8 digits */
   std::string inputEmployeeNumber; /* 5 digits */
-  User user;
   Database dastabase;
 };
 

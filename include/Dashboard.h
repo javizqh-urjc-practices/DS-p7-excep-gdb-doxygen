@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2022
  * 
  */
-#include "User.h"
+#include "Admin.h" // Also includes User
 #include "MenuBar.h"
 #include "Menu.h"
 
@@ -24,8 +24,8 @@ class Dashboard{
     * @param type Type of Dashboard interface
     * @return Dashboard*  
     */
-    static Dashboard *Create(const std::string type = "CLI");
-    Dashboard(); /* basic constructor */
+    static Dashboard *Create(const User &user, const std::string type = "CLI");
+    Dashboard(const User &user); /* basic constructor */
     virtual ~Dashboard();
     virtual void showMainMenu() = 0;
     /**
@@ -60,13 +60,6 @@ class Dashboard{
     * @param newValue New value to add
     */
     void changeCurrentSensorInfo(std::string toChange, std::string newValue);
-
-    /**
-    * @brief Adds the user to the dashboard
-    * 
-    * @param user Current user
-    */
-    void setUser(User user);
     /**
     * @brief Creates the new sensor and calls addToMainMenu
     * 

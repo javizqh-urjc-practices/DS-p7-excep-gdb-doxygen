@@ -10,6 +10,7 @@
  */
 #include "LoginInterface.h"
 #include "CLLoginInterface.h"
+#include <stdexcept> 
 
 LoginInterface::LoginInterface(){}
 
@@ -23,13 +24,13 @@ LoginInterface *LoginInterface::Create(const std::string type){
   }
 };
 
-bool LoginInterface::checkUser(){
-  this->user = this->dastabase.getUser(this->inputEmployeeNumber,this->inputNIF);
-  return ! (user.isSameEmployeeNumber("00000") && user.isSameNIF("00000000")); // Is valid user 
-}
-
-User LoginInterface::getUser(){
-  return this->user;
+User LoginInterface::checkUser(){
+  try {
+    User user = this->dastabase.getUser(this->inputEmployeeNumber,this->inputNIF);
+    return user;
+  } catch (std::exception &e) {
+    throw; // exception raised again
+  }
 }
 
 LoginInterface::~LoginInterface(){}

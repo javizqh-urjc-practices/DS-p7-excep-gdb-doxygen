@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['user_120',['User',['../classUser.html',1,'User'],['../classUser.html#a54794305b09de5dddd9fae6d3ba38b6f',1,'User::User()']]],
-  ['user_2ecpp_121',['User.cpp',['../User_8cpp.html',1,'']]],
-  ['user_2eh_122',['User.h',['../User_8h.html',1,'']]]
+  ['thermometer_118',['Thermometer',['../classThermometer.html',1,'Thermometer'],['../classThermometer.html#aab1aa3e3411f8789ba954a98ab921681',1,'Thermometer::Thermometer()']]],
+  ['thermometer_2ecpp_119',['Thermometer.cpp',['../Thermometer_8cpp.html',1,'']]],
+  ['thermometer_2eh_120',['Thermometer.h',['../Thermometer_8h.html',1,'']]]
 ];

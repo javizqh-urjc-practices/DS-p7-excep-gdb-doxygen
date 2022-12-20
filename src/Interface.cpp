@@ -28,18 +28,19 @@ void Interface::login(const std::string userNumber, const std::string nif){
   this->loginInterface = loginInterface;
   this->loginInterface->askEmployeeNumber(userNumber);
   this->loginInterface->askNIF(nif);
-  if (this->loginInterface->checkUser()){
+  try {
+    this->user = this->loginInterface->checkUser();
     system("clear");
     delete this->loginInterface;
-  } else {
+  } catch (std::exception &e) {
+    throw; // exception raised again
     exit(1);
   }
 };
 
 bool Interface::loadMenu(){
-  dashboard = Dashboard::Create();
+  dashboard = Dashboard::Create(this->user);
   this->dashboard = dashboard;
-  this->dashboard->setUser(this->loginInterface->getUser());
   this->dashboard->showMainMenu();
   bool canExit = this->dashboard->canExit();
   delete this->dashboard;
