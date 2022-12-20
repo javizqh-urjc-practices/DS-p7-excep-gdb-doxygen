@@ -15,11 +15,19 @@ Interface::Interface(){};
 
 Interface *Interface::Create(const std::string type){
   if (type == "CLI"){
-    return new CLInterface;
+    try {
+      return new CLInterface;
+    }
+    catch(std::bad_alloc &except) {
+     std::cerr << "Exception: " << except.what() << std::endl;
+     std::exit(EXIT_FAILURE);
+    } catch(std::exception &e){
+      throw e;
+    }
   }
   else {
     throw std::runtime_error(type + " is not a defined Interface type");
-    std::exit(1);
+    std::exit(EXIT_FAILURE);
   }
 };
 
