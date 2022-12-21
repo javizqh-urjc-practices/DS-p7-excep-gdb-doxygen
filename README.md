@@ -1,4 +1,4 @@
-# P4-ImplClases
+# P7-excep-gdb-doxygen-JavierIzqUni
 ## Requirements
 
   * Linux
@@ -10,8 +10,8 @@
 
 The code can be compiled with the provided commands.
 ```bash
-git clone https://github.com/clases-julio/p4-implclases-JavierIzqUni.git
-cd p4-implclases-JavierIzqUni
+git clone https://github.com/clases-julio/p7-excep-gdb-doxygen-JavierIzqUni.git
+cd p7-excep-gdb-doxygen-JavierIzqUni
 ./install
 ```
 
