@@ -39,3 +39,6 @@ the program will try to log in with the passed arguments using the command line 
 
 ## Recomendations
 * Use the text mode in order to see with more resolution. Usually press: `Super + F2/F3/F4`
+
+## Extra
+For the GDB debugging screenshots view the following [pdf](/doc/GDB.pdf).
